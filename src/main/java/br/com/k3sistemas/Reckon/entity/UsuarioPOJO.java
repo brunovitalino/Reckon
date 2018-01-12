@@ -1,6 +1,6 @@
 package br.com.k3sistemas.Reckon.entity;
 
-public class Usuario {
+public class UsuarioPOJO {
 	private String usuario;
 	private String senha;
 	private Boolean usuarioValido;

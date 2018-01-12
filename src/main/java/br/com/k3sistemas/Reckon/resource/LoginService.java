@@ -1,4 +1,4 @@
-package br.com.k3sistemas.Reckon.service;
+package br.com.k3sistemas.Reckon.resource;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -6,7 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import br.com.k3sistemas.Reckon.entity.Usuario;
+import br.com.k3sistemas.Reckon.entity.UsuarioPOJO;
 
 @Path("/loginService")
 public class LoginService {
@@ -15,7 +15,7 @@ public class LoginService {
 	@Path("/validarUsuario")
 	@Consumes({ MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.APPLICATION_JSON })
-	public Usuario validarUsuario(Usuario usuario) {
+	public UsuarioPOJO validarUsuario(UsuarioPOJO usuario) {
 		usuario.setUsuarioValido(false);
 		if (usuario.getUsuario().equals("admin") && usuario.getSenha().equals("admin"))
 			usuario.setUsuarioValido(true);
